@@ -10,6 +10,7 @@ export default {
   cache: true,
   target: 'web',
   output: {
+    publicPath: '/',
     filename: 'bundle.js',
   },
   module: {

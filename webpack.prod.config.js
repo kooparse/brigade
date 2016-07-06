@@ -4,6 +4,7 @@ import autoprefixer from 'autoprefixer'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
+import FaviconsWebpackPlugin from 'favicons-webpack-plugin'
 
 export default {
   entry: './index.js',
@@ -11,6 +12,7 @@ export default {
   cache: false,
   target: 'web',
   output: {
+    publicPath: './',
     filename: 'dist/bundle.[chunkhash].js',
   },
   module: {
@@ -33,7 +35,28 @@ export default {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin('dist'),
+    new CleanWebpackPlugin([
+      'dist',
+      'favicon.png',
+      'index.html'
+    ]),
+    new FaviconsWebpackPlugin({
+      logo: './statics/favicon.png',
+      prefix: 'dist/icons-[hash]/',
+      inject: true,
+      icons: {
+        android: false,
+        appleIcon: false,
+        appleStartup: false,
+        coast: false,
+        favicons: true,
+        firefox: false,
+        opengraph: false,
+        twitter: false,
+        yandex: false,
+        windows: false
+      }
+    }),
     new ExtractTextPlugin('dist/bundle.[chunkhash].css'),
     new HtmlWebpackPlugin({
       template: 'statics/template.html',
