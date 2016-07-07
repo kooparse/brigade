@@ -451,6 +451,10 @@ p {
   box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
   background-color: rgb(255, 255, 255);
 }
+.example {
+  max-width: 100%;
+  margin: 20px 0px 5px;
+}
 @media screen and (max-width: 740px) {
   .vote { -webkit-box-orient: vertical; -webkit-box-direction: normal; -webkit-flex-direction: column; -moz-box-orient: vertical; -moz-box-direction: normal; flex-direction: column; }
 }

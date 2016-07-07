@@ -102,6 +102,11 @@ p {
   background-color: rgb(255, 255, 255);
 }
 
+.example {
+  max-width: 100%;
+  margin: 20px 0px 5px;
+}
+
 @media screen and (max-width: 740px) {
   .vote { flex-direction: column; }
 }
