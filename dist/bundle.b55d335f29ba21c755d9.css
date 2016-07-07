@@ -439,7 +439,7 @@ p {
 .red { color: #fd7939; }
 .container {
   width: 90%;
-  margin: 130px auto;
+  margin: 80px auto;
   padding: 0px 15px;
 }
 .column {
@@ -460,5 +460,6 @@ p {
 }
 @media screen and (max-width: 630px) {
   body { font-size: 14px; }
+  .container { margin: 35px auto; }
   .column { padding: 35px 30px; }
 }
