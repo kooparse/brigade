@@ -62,7 +62,7 @@ export default {
       template: 'statics/template.html',
       filename: 'index.html',
       minify: {
-        removeComments: true,
+        removeComments: false,
         collapseWhitespace: true,
         removeRedundantAttributes: true,
         useShortDoctype: true,
